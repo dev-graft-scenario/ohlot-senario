@@ -1,55 +1,45 @@
-# 서비스 이름으로 변경해주세요.
+# Oh Lot!
 
-서비스 소개 글 및 해당 프로젝트 역할을 설명해주세요!
+좋은 말을 함께 나누어요!
 
-> 설명을 위해 작성한 코드블럭입니다.  
-> 템플릿 사용 시 읽어보고 지워주세요!
 
 ```
-설명 달 예정
+좋은 단어, 좋은 문장 등 긍정적인 감정을 담은 말을 작성하고 함께 나누는 것이 서비스 목적입니다.
+
+- 좋은 단어를 공유하여 추천 받는 기능
+- 좋은 단어를 제시 받아서 단어를 활용한 문장을 다른 회원에게 전송하는 기능
 ```
+## 🎭 시나리오
 
-### :framed_picture: 서비스 이미지
+### 회원 (Member)
+- "회원"은 OhLot 서비스를 이용하는 고객을 의미합니다.
+- "회원"은 닉네임을 변경할 수 있고 다음의 정책을 갖습니다.
+  - 20자 이하의 길이를 갖습니다.
+  - 특수문자를 포함할 수 없습니다.
+  - 변경은 마지막 변경일로부터 30일 이후 가능합니다.
+ 
+- "회원"은 탈퇴를 요청할 수 있으며 다음의 정책을 갖습니다.
+  - "탈퇴" 요청 이후 "회원"의 접속을 제한합니다.
+  - "탈퇴" 요청으로 15일 이내 "탈퇴 취소"를 요청할 수 있습니다.
+  - "탈퇴" 요청으로 15일 이후 회원의 활동 내용은 삭제됩니다.
+  - 15일이란, 요청이 발생한 일로부터 15일 뒤 오후3시를 의미합니다.
 
----
+### 좋은 단어 (GoodWord)
 
 
-### :pushpin: 참여 팀원
-|     [팀원 닉네임](팀원-프로필-주소)      |
-|:----------------------------:|
-|  <img src="" width="100px">  |
-| BE, FE, IOS, ANDROID, DESIGN |
-|            한줄 설명             |
 
---- 
-### :screwdriver: 기술 스택
-<p align="center">
-<img src="https://img.shields.io/badge/TypeScript-569A31?style=for-the-badge&logo=JavaScript&logoColor=white">
-<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white">
-<img src="https://img.shields.io/badge/JAVA-007396?style=for-the-badge&logo=java&logoColor=white">
-<img src="https://img.shields.io/badge/Kotlin-2496ED?style=for-the-badge&logo=kotlin&logoColor=orange">
-<img src="https://img.shields.io/badge/ReactNative-2496ED?style=for-the-badge&logo=react&logoColor=white">
-</p>
-<p align="center">
-<img src="https://img.shields.io/badge/IOS-white?style=for-the-badge&logo=apple&logoColor=black">
-<img src="https://img.shields.io/badge/Android-green?style=for-the-badge&logo=android&logoColor=white">
-<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black">
-<img src="https://img.shields.io/badge/Testing Library-E33332?style=for-the-badge&logo=testingLibrary&logoColor=white">
-<img src="https://img.shields.io/badge/React Router-CA4245?style=for-the-badge&logo=reactRouter&logoColor=white">
-</p>
-<p align="center">
-<img src="https://img.shields.io/badge/Spring Boot-6DB33F?style=for-the-badge&logo=Spring Boot&logoColor=white">
-<img src="https://img.shields.io/badge/JUnit5-25A162?style=for-the-badge&logo=JUnit5&logoColor=white">
-<img src="https://img.shields.io/badge/mariaDB-003545?style=for-the-badge&logo=mariaDB&logoColor=white">
-<img src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white"> 
-<img src="https://img.shields.io/badge/Amazon AWS-232F3E?style=for-the-badge&logo=Amazon AWS&logoColor=white">
-</p>
-<p align="center">
-<img src="https://img.shields.io/badge/Amazon S3-569A31?style=for-the-badge&logo=Amazon S3&logoColor=white">
-<img src="https://img.shields.io/badge/NGINX-009639?style=for-the-badge&logo=NGINX&logoColor=white">  
-<img src="https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=Jenkins&logoColor=white"> 
-<img src="https://img.shields.io/badge/SonarQube-4E9BCD?style=for-the-badge&logo=SonarQube&logoColor=white"> 
-<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=Docker&logoColor=white"> 
-</p>
+### 📚 전제 조건
+- 테이블 및 기본데이터 .sql 파일로 제공하였습니다.
+- 테이블 추가 및 변경이 가능합니다.
 
-### 
+### ⛳ Goals
+- ✅ 시나리오를 파악하여 필요한 API를 구현합니다.
+- ✅ 프로젝트 구조와 컨벤션을 고민하고 다른 참가자와 공유할 수 있도록 합니다.
+
+
+### ⛳ Server Side Goals
+- ✅ "좋은 말"에는 특수기호는 포함될 수 없습니다.
+- 
+- 결제 과정에 내가 선택한 좌석을 다른 사용자가 예매할 수 없도록 제한할 수 있어야합니다.
+- ✅ 결제가 완료된 예매 정보를 예매율에 반영할 수 있어야합니다.
+- ✅ 대규모 트래픽을 고려하여 예매율을 실시간으로 보여줄 수 있어야합니다.
